@@ -1,0 +1,4 @@
+build/
+.stack-work/
+*~
+/dotcode

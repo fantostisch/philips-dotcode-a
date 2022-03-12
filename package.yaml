@@ -1,0 +1,42 @@
+name: dotcode
+version: 0.1.0.0
+
+dependencies:
+  - base >= 4.7 && < 5
+
+default-extensions:
+    - BinaryLiterals
+    - ScopedTypeVariables
+
+library:
+    source-dirs: src
+
+executables:
+  dotcode:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -Wall
+      - -Wpartial-fields
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - dotcode
+      - text
+      - optparse-applicative
+
+tests:
+  dotcode-test:
+    main: Spec.hs
+    source-dirs:
+      - test
+    dependencies:
+      - dotcode
+      - hspec
+      - QuickCheck
+      - quickcheck-instances
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
