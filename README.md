@@ -17,6 +17,8 @@ Description on how Dotcode A works is available in the [doc](doc/) folder.
 
 ## Development
 
+[Install The Haskell Tool Stack](https://haskellstack.org)
+
 ### Building and running
 
 Build on every change:
